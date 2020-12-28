@@ -2,17 +2,15 @@
 
 include_once("Welcome to ECHOTEL.html");
 
-
-$connection = mysql_connect("localhost","root","");
-
-mysql_select_db("blog1")or die(mysql_error());
-
-
-$result = mysql_query("SELECT username FROM member");
- while ($row = mysql_fetch_assoc($result)) {
-echo "<div id='link' onClick='addText(\"".$row['username']."\");'>" . $row['username'] . "</div>";  
- }
-
-
+<form method="GET">
+  <input type="text" name="someName">
+  //The Name Attribute will be put into the _GET inside of php 
+  <input type="submit" value="Submit">
+ </form>
+  
+<?php
+$var = $_GET("someName");
+echo ($var);
+?>
   
 ?>
