@@ -1,5 +1,5 @@
 <?php
 
-include_once("contact us.html");
+include("contact us.html");
 
 ?>
